@@ -6,8 +6,27 @@ html {
   background-size: cover;
 }
 
-#raw-logo {
-  width: 20%;
+p {
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  line-height: 25px;
+  font-weight: 600;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: color 300ms ease-in-out;
+}
+
+a:hover {
+  color: #2176AE;
+}
+
+.content {
+  width: 30%;
   height: auto;
   position: fixed;
   top: 50%;
@@ -15,4 +34,26 @@ html {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
+}
+
+@media (max-width: 740px) {
+  p {
+    padding: 0 25px;
+  }
+  .content {
+    width: 100%;
+  }
+}
+
+@keyframes colorChange {
+  0% { fill: white; }
+  50% { fill: #85C7F2; }
+  100% { fill: white; }
+}
+
+#crystal {
+  -webkit-animation: colorChange 5s infinite ease-in-out; /* Safari 4+ */
+  -moz-animation:    colorChange 5s infinite ease-in-out; /* Fx 5+ */
+  -o-animation:      colorChange 5s infinite ease-in-out;
+  animation: colorChange 5s infinite ease-in-out;
 }
